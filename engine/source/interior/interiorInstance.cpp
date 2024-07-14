@@ -1699,7 +1699,7 @@ void InteriorInstance::addTriggers(Vector<U32>& usedTriggerIds)
 
     for (U32 i = 0; i < mInteriorRes->getNumTriggers(); i++)
     {
-        if (std::find(usedTriggerIds.begin(), usedTriggerIds.end(), i) != usedTriggerIds.end())
+        if (find(usedTriggerIds.begin(), usedTriggerIds.end(), i) != usedTriggerIds.end())
             continue;
         usedTriggerIds.push_back(i);
         InteriorResTrigger* resTrigger = mInteriorRes->getTrigger(i);
