@@ -1519,7 +1519,7 @@ void InteriorInstance::addChildren()
                     {
                         for (U32 j = 0; j < mInteriorRes->getNumTriggers(); j++)
                         {
-                            if (std::find(usedTriggerIds.begin(), usedTriggerIds.end(), j) != usedTriggerIds.end())
+                            if (find(usedTriggerIds.begin(), usedTriggerIds.end(), j) != usedTriggerIds.end())
                                 continue;
 
                             InteriorResTrigger* resTrigger = mInteriorRes->getTrigger(j);
@@ -1637,7 +1637,7 @@ void InteriorInstance::addDoors(bool hide, Vector<U32>& usedTriggerIds)
         for (U32 k = 0; k < follower->mTriggerIds.size(); k++)
         {
             U32 triggerId = follower->mTriggerIds[k];
-            if (std::find(usedTriggerIds.begin(), usedTriggerIds.end(), triggerId) != usedTriggerIds.end())
+            if (find(usedTriggerIds.begin(), usedTriggerIds.end(), triggerId) != usedTriggerIds.end())
                 continue;
 
             InteriorResTrigger* resTrigger = mInteriorRes->getTrigger(triggerId);
